@@ -6,35 +6,51 @@
     <title>Para Ti</title>
     <style>
         body {
-            /* Ruta a tu imagen de fondo. ¡Asegúrate de que la ruta sea correcta! */
-            background-image: url('ella.PNG'); 
-            background-size: cover; /* Hace que la imagen cubra todo el fondo */
-            background-position: center; /* Centra la imagen */
-            background-repeat: no-repeat; /* Evita que la imagen se repita */
-            background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
-            margin: 0; /* Elimina el margen predeterminado del body */
-            height: 100vh; /* Ocupa el 100% de la altura de la ventana */
-            display: flex; /* Para centrar el contenido vertical y horizontalmente */
-            justify-content: center; /* Centra horizontalmente */
-            align-items: center; /* Centra verticalmente */
-            font-family: Arial, sans-serif; /* Tipo de letra para el texto */
-            color: white; /* Color del texto para que contraste con la imagen */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para que el texto se lea mejor */
-            text-align: center; /* Centra el texto */
-            padding: 20px; /* Pequeño espacio alrededor del texto */
-            box-sizing: border-box; /* Incluye el padding en el ancho/alto total */
+            background-image: url('ella.PNG'); /* Asegúrate que la ruta sea correcta */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .mensaje-contenedor {
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el mensaje */
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 30px 40px;
-            border-radius: 10px; /* Bordes redondeados */
-            max-width: 80%; /* Ancho máximo del contenedor del mensaje */
+            border-radius: 10px;
+            max-width: 80%;
         }
 
         h1 {
-            font-size: 3em; /* Tamaño de letra grande para el mensaje */
-            margin: 0; /* Elimina el margen del título */
+            font-size: 3em; /* Tamaño de fuente para pantallas grandes */
+            margin: 0;
+        }
+
+        /* --- MEDIA QUERY PARA TELÉFONOS --- */
+        @media (max-width: 768px) { /* Esto significa: "Cuando el ancho de la pantalla sea de 768px o menos" */
+            .mensaje-contenedor {
+                padding: 20px 25px; /* Reducir un poco el padding en pantallas pequeñas */
+            }
+            h1 {
+                font-size: 1.8em; /* Reducir el tamaño de la fuente para teléfonos */
+            }
+        }
+
+        /* Puedes añadir otra media query para tablets si lo necesitas */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            h1 {
+                font-size: 2.5em; /* Un tamaño intermedio para tablets */
+            }
         }
     </style>
 </head>
